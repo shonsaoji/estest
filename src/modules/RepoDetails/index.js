@@ -3,13 +3,13 @@
  * ========================================================================== */
 
 import angular        from 'angular';
-import HomeController from './controller/ProfileCtrl';
+import RepoDetailsCtrl from './controller/RepoDetails';
 
 /*
  * Stylesheets
  * ========================================================================== */
 
-import './stylesheets/profile.scss';
+import './stylesheets/repo_details.scss';
 
 /* ========================================================================== */
 
@@ -19,4 +19,4 @@ import './stylesheets/profile.scss';
  * @param {Array} dependencies.
  * @export Module name - name of this module.
  */
-export default angular.module('Starter.App.Home', []).controller('ProfileController', HomeController).name;
+export default angular.module('Starter.App.RepoDetails', []).controller('RepoDetailsCtrl', RepoDetailsCtrl).name;

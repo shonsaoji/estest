@@ -8,8 +8,10 @@ import AppView             from './modules/Starter/views/layout.jade';
 
 import Controllers         from './modules/Starter/Controllers';
 
+import Chart from 'chart.js'
 
-const appname = 'Starter';  /** App and root module name */
+
+const appname = 'EverString';  /** App and root module name */
 const deps    = [uiRouter, 'ui.router.stateHelper'];  /** All global dependencies */
 const modules = [Controllers];  /** All app dependencies */
 

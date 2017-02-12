@@ -21,7 +21,7 @@
         .row.repo(ng-repeat="repo in Home.repositories")
             .col-xs-12.title
                 strong.accent-b
-                    {{repo.name}}
+                    a(ui-sref='details({owner: repo.owner.login, repo: repo.name})') {{repo.name}}
             .col-xs-3
                 strong.grey Watchers
                 br

@@ -27,18 +27,18 @@ const Config = (stateHelperProvider, $urlRouterProvider, $locationProvider, $log
 
   stateHelperProvider /** Describe our states */
     .state({
-      url: '/',
+      url: '/?q=',
       name: 'home',
       controller: 'HomeController',
       controllerAs: 'Home',
       template: require('./modules/Home/views/home.jade')()
     })
     .state({
-      url: 'profile',
-      name: 'home.profile',
-      controller: 'ProfileController',
-      controllerAs: 'profile',
-      template: require('./modules/Profile/views/profile.jade')()
+      url: '/details/:owner/:repo',
+      name: 'details',
+      controller: 'RepoDetailsCtrl',
+      controllerAs: 'detailsCtrl',
+      template: require('./modules/RepoDetails/views/details.jade')()
     });
 };
 

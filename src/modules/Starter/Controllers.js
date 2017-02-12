@@ -6,6 +6,7 @@ import angular from 'angular';
 
 import Layout  from './Index';
 import Home    from '../Home/Index';
+import RepoDetails    from '../RepoDetails/index';
 
 /**
  * Define app module.
@@ -14,5 +15,5 @@ import Home    from '../Home/Index';
  * @export Controllers module
  */
 export default angular.module('Starter.App.controllers', [
-  Layout, Home
+  Layout, Home, RepoDetails
 ]).name;

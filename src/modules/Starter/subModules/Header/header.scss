@@ -2,5 +2,52 @@
 @import "../../../../stylesheets/variables.scss";
 
 .header {
+    background: $gdark;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 6vh;
+    width: 100%;
+    color: $glightest;
+    z-index: 1;
 
+    .navigation {
+        height: 100%;
+        li {
+            height: 100%;
+            &.brand {
+                margin-right: 25px;
+                a {
+                    cursor: pointer;
+                    color: $yellow;
+                    &:hover, &:focus {
+                        background: transparent;
+                        border-bottom: 0;
+                    }
+                }
+            }
+            &.active {
+                background: $gdark;
+                a, a:hover, a:focus {
+                    background: none;
+                    color: $glightest;
+                    border-bottom: 4px solid $yellow;
+                }
+            }
+            a {
+                height: 100%;
+                border-radius: 0;
+                color: $glightest;
+
+                &:hover {
+                    background: $grey;
+                }
+                &:focus {
+                    background: $gdark;
+                    color: $glightest;
+                    border-bottom: 4px solid $yellow;
+                }
+            }
+        }
+    }
 }

@@ -1,1 +1,40 @@
-.page-content.page_home
+.container.page_home
+    .search-form.row
+        form.form-horizontal(ng-submit="Home.getRepos()")
+            .form-group.col-sm-10.search-box
+                input.form-control(type="text", placeholder="Search Github Users", ng-model="Home.search_str", autofocus)
+            .form-group.col-sm-2.submit-btn
+                input.form-control(type='submit', value='Search')
+    .row.error(ng-show='Home.error')
+        .col-xs-12
+            .alert.alert-danger
+                {{Home.error}}
+
+    .content(ng-show='Home.repositories.length > 0')
+        .row.owner
+            .col-sm-1.col-xs-3
+                img.img-responsive.img-circle(ng-src="{{Home.repositories[0].owner.avatar_url}}")
+            .col-sm-11.col-xs-9
+                h3 {{Home.repositories[0].owner.login}}
+
+
+        .row.repo(ng-repeat="repo in Home.repositories")
+            .col-xs-12.title
+                strong.accent-b
+                    {{repo.name}}
+            .col-xs-3
+                strong.grey Watchers
+                br
+                {{repo.watchers_count}}
+            .col-xs-3
+                strong.grey Language
+                br
+                {{repo.language}}
+            .col-xs-3
+                strong.grey Forks
+                br
+                {{repo.forks_count}}
+            .col-xs-3
+                strong.grey Issues
+                br
+                {{repo.open_issues_count}}

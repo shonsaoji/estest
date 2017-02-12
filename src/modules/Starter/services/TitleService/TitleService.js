@@ -14,7 +14,7 @@ const Service = () => {
 
   class TitleService {
     static setTitle(params = {}) {
-      const defaultTitle = params.default  || 'Angular Webpack Starter Kit';
+      const defaultTitle = params.default  || 'Everstring';
       const newTitle     = params.newTitle || '';
       const devider      = params.devider  || ' –– ';
 

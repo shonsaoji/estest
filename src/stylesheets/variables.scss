@@ -3,19 +3,27 @@
  * ========================================================================== */
 
 $white:                 #fff;
-$black:                 #000;
+$gdark: #495057;
+$grey: #868E96;
+$glight: #CED4DA;
+$glightest: #F8F9FA;
+$blue: #329AF0;
+$red: #FA5252;
+$yellow: #FAB005;
+$green: #40C057;
 
-$color-base:            $black;
-$link-color:            $black;
-$body-bg-color:         $white;
+
+$color-base:            $gdark;
+$link-color:            $blue;
+$body-bg-color:         $glightest;
+
 
 /*
  * Typography
  * ========================================================================== */
+$Lato-font:        'Lato', sans-serif;
 
-$Helvetica-font:        Helvetica, Arial, sans-serif;
-
-$font-family-base:      $Helvetica-font;
+$font-family-base:      $Lato-font;
 
 $font-size-base:        16px;
 
